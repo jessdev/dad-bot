@@ -2,7 +2,7 @@
   "name": "twitch-monitor-bot",
   "version": "1.0.0",
   "description": "This is a bot for linking twitch streams",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/jessdev/twitch-monitor-bot/issues"
   },
-  "homepage": "https://github.com/jessdev/twitch-monitor-bot#readme"
+  "homepage": "https://github.com/jessdev/twitch-monitor-bot#readme",
+  "dependencies": {
+    "discord.io": "^2.5.3",
+    "winston": "^2.4.0"
+  }
 }
