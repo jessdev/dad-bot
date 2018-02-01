@@ -1,0 +1,24 @@
+{
+  "name": "twitch-monitor-bot",
+  "version": "1.0.0",
+  "description": "This is a bot for linking twitch streams",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessdev/twitch-monitor-bot.git"
+  },
+  "keywords": [
+    "twitch",
+    "discord",
+    "bot"
+  ],
+  "author": "jessdev@umich.edu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessdev/twitch-monitor-bot/issues"
+  },
+  "homepage": "https://github.com/jessdev/twitch-monitor-bot#readme"
+}
