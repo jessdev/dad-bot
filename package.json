@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/jessdev/twitch-monitor-bot#readme",
   "dependencies": {
-    "discord.io": "^2.5.3",
+    "discord.io": "github:woor/discord.io#gateway_v6",
     "winston": "^2.4.0"
   }
 }
