@@ -1,6 +1,6 @@
 {
   "name": "twitch-monitor-bot",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "This is a bot for linking twitch streams",
   "main": "bot.js",
   "scripts": {
