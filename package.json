@@ -24,5 +24,8 @@
   "dependencies": {
     "axios": "^0.18.1",
     "discord.io": "github:woor/discord.io#gateway_v6"
+  },
+  "devDependencies": {
+    "ws": ">=3.3.1"
   }
 }
