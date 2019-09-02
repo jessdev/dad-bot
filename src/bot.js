@@ -1,37 +1,17 @@
-var Discord = require('discord.io');
+const Discord = require('discord.js');
 var auth = require('./auth.json');
 var api = require('./twitch-api');
 
+const client = new Discord.Client();
 
-console.log(auth.discord.token);
-// Initialize Discord Bot
-var bot = new Discord.Client({
-   token: auth.discord.token,
-   autorun: true
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
 });
 
-bot.on('ready', function(event) {
-    console.log('Logged in as %s - %s\n', bot.username, bot.id);
+client.on('message', msg => {
+  if (msg.content === 'ping') {
+    msg.reply('pong');
+  }
 });
 
-bot.on('message', function(user, userID, channelID, message, event) {
-    if (message === "ping") {
-        bot.sendMessage({
-            to: channelID,
-            message: "pong"
-        });
-    }
-});
-
-function responseHandler(customHandle){
-    return (error, response)=>{
-        if(error){
-            console.log(error);
-            return;
-        }
-        console.log(response);
-        if(customHandle != null){
-            return customHandle(response);
-        }
-    }
-}
+client.login(auth.discord.token);
