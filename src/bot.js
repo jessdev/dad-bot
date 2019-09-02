@@ -1,5 +1,6 @@
 var Discord = require('discord.io');
 var auth = require('./auth.json');
+var api = require('./twitch-api');
 
 // Initialize Discord Bot
 var bot = new Discord.Client({
@@ -19,3 +20,16 @@ bot.on('message', function(user, userID, channelID, message, event) {
         });
     }
 });
+
+function responseHandler(customHandle){
+    return (error, response)=>{
+        if(error){
+            console.log(error);
+            return;
+        }
+        console.log(response);
+        if(customHandle != null){
+            return customHandle(response);
+        }
+    }
+}
