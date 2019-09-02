@@ -27,20 +27,20 @@ var authentication = {
 //     console.log(response);
 // });
 
-getRequest('https://id.twitch.tv/oauth2/token?client_id='+auth.twitch.ClientId
-+ '&client_secret='+ auth.twitch.ClientSecret
-+ '&grant_type=client_credentials'
-+ '&scope=user:edit'
-).then((response)=>{
-    console.log(response);
-});
+// getRequest('https://id.twitch.tv/oauth2/token?client_id='+auth.twitch.ClientId
+// + '&client_secret='+ auth.twitch.ClientSecret
+// + '&grant_type=client_credentials'
+// + '&scope=user:edit'
+// ).then((response)=>{
+//     console.log(response);
+// });
 
  function getRequest(url){
     return axios({
         method: 'GET',
         url: url,
     }).catch(error =>{
-        console.log("FUCKKK");
         console.error(error);
+        console.error("Error occured at url: "+ url)
     })
 }

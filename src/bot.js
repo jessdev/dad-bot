@@ -2,6 +2,8 @@ var Discord = require('discord.io');
 var auth = require('./auth.json');
 var api = require('./twitch-api');
 
+
+console.log(auth.discord.token);
 // Initialize Discord Bot
 var bot = new Discord.Client({
    token: auth.discord.token,
