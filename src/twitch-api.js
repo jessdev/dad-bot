@@ -42,7 +42,20 @@ var client = axios.create({
 
 var topStreams = [];
 
-client.get('https://api.twitch.tv/helix/streams?game_id=33214').then((response) => {
+
+
+function getRequest(url) { 
+    return axios({
+        method: 'GET',
+        url: url,
+    }).catch(error => {
+        console.error(error);
+        console.error("Error occured at url: " + url)
+    });
+}
+
+function getTop5Streams() {
+    client.get('https://api.twitch.tv/helix/streams?game_id=33214').then((response) => {
     topStreams = response.data.data;
     var list = [];
     for(var i = 0; i<5; i++){
@@ -54,22 +67,11 @@ client.get('https://api.twitch.tv/helix/streams?game_id=33214').then((response) 
     console.error("Error occured at url: " + url)
 });
 
-function getRequest(url) {
-    return axios({
-        method: 'GET',
-        url: url,
-    }).catch(error => {
-        console.error(error);
-        console.error("Error occured at url: " + url)
-    });
 }
-
-function getTop5Streams(){
-    var list = [];
-    for(var i = 0; i<5; i++){
-        list.push({name: topStreams[i].title, img: topStreams[i].thumbnail_url});
-    }
-}
+// var list = [];
+// for(var i = 0; i<5; i++){
+//     list.push({name: topStreams[i].title, img: topStreams[i].thumbnail_url});
+// }
 
 module.exports = {
     topStreams: topStreams,

@@ -17,13 +17,24 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === '!get-streams') {
-    var streams = api.topStreams;
+    var streams = api.getTop5Streams();
+    console.log(streams);
     var message = "";
     var length = 5;
     for(var i = 0; i< length; i++){
       message = message + " "+ streams[i].name;
     }
     msg.reply(message);
+  }
+
+  if(msg.content === "@DotA"){
+    msg.channel.send("The beacon has been lit, "+msg.author+" calls for aid.");
+  }
+});
+
+client.on('message', msg => {
+  if(msg.content === '!test') {
+    msg.reply('This is a test.');
   }
 });
 
