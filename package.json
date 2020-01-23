@@ -4,7 +4,7 @@
   "description": "This is a bot for linking twitch streams",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "node src/bot.js"
   },
   "repository": {
     "type": "git",
