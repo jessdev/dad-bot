@@ -67,10 +67,12 @@ function findSwearWords(msg) {
 }
 
 function hiSport(msg) {
+  //console.log("hi sport");
+  //console.log(msg);
   var content = msg.content;
   var regex = /I'm a ([A-z]+)+|im ([A-z]+)|I'm ([A-z]+)/g;
   var result = regex.exec(content);
-  console.log(result);
+  //console.log(result);
   if (result !== null) {
     var whoAmi = "";
     if (result[1] !== undefined) {
