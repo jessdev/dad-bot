@@ -41,6 +41,12 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if(msg.content.toLowerCase() === "hi dad"){
+    msg.reply("Hi sport! How your day?!?");
+  }
+});
+
 function findSwearWords(msg) {
   var content = msg.content.toLowerCase();
   if (content.includes("fuck")) {
@@ -65,6 +71,7 @@ function findSwearWords(msg) {
     msg.reply(":neutral_face:");
   }
 }
+
 
 function hiSport(msg) {
   //console.log("hi sport");
