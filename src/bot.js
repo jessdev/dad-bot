@@ -1,9 +1,6 @@
 const Discord = require('discord.js');
 var auth = require('./auth.json');
-var api = require('./twitch-api');
-
 const client = new Discord.Client();
-console.log(api);
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -16,16 +13,6 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === '!get-streams') {
-    var streams = api.getTop5Streams();
-    console.log(streams);
-    var message = "";
-    var length = 5;
-    for (var i = 0; i < length; i++) {
-      message = message + " " + streams[i].name;
-    }
-    msg.reply(message);
-  }
 
   if (msg.content === "@DotA") {
     msg.channel.send("The beacon has been lit, " + msg.author + " calls for aid.");
@@ -69,6 +56,10 @@ function findSwearWords(msg) {
     msg.reply(" you sure do have a potty mouth, boy.");
   } else if (content.includes("stupid")) {
     msg.reply(":neutral_face:");
+  } else if(content.includes("bitch")){
+    msg.reply(" Don't talk about your mother that way!");
+  } else if(content.includes("oriental") || content.includes("chink")){
+    msg.reply(" Son I am dissapointed in you.");
   }
 }
 
@@ -77,7 +68,7 @@ function hiSport(msg) {
   //console.log("hi sport");
   //console.log(msg);
   var content = msg.content;
-  var regex = /I'm a ([A-z]+)+|im ([A-z]+)|I'm ([A-z]+)/g;
+  var regex = /I'm a ([A-z]+)+|im ([A-z]+)|I'm ([A-z]+)/gi;
   var result = regex.exec(content);
   //console.log(result);
   if (result !== null) {
