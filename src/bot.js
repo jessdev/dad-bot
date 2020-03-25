@@ -55,6 +55,5 @@ function hiSport(msg) {
     }
   }
 }
-//dick penis suck butt ass darn shit
 
 client.login(auth.discord.token);
