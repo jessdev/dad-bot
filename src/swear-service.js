@@ -32,8 +32,6 @@ function findSwearWords(msg) {
         msg.reply(" you sure do have a potty mouth, boy.");
     } else if (content.includes("stupid")) {
         msg.reply(":neutral_face:");
-    } else if (content.includes("bitch")) {
-        msg.reply(" Don't talk about your mother that way!");
     } else {
         let yesBad = false;
         badWordList.forEach(element => {

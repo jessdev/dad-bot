@@ -33,6 +33,13 @@ client.on('message', msg => {
   if(msg.content.toLowerCase() === "hi dad"){
     msg.reply("Hi sport! How your day?!?");
   }
+  if(msg.content.toLowerCase().includes("how's mom")){
+    msg.reply("Ah your mother's beautiful as always!");
+  }
+});
+
+client.on('message', msg => {
+  msg.con
 });
 
 function hiSport(msg) {
