@@ -39,7 +39,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  msg.con
+  console.log(msg);
 });
 
 function hiSport(msg) {

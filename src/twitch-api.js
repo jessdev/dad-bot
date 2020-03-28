@@ -1,7 +1,7 @@
 var axios = require('axios');
 var auth = require('./auth.json');
 const twitchApi = 'https://api.twitch.tv/helix/';
-let authToken = "fuckall";
+let authToken = "tokenhere";
 
 var users = {
     byLogin: function (loginName) {

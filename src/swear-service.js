@@ -3,11 +3,12 @@ var fs = require('fs');
 var badWordList = fs.readFileSync("./src/badwords.txt", {encoding: 'UTF8' }).split(",");
 
 const defaultResponses = [
-    " son, I am dissapointed in you",
-    " what would your mother think of talk like that?",
-    " you really should watch your language.",
-    " you break my heart everytime you use language like that.",
-    " now listen here, sport."
+    "son, I am dissapointed in you",
+    "what would your mother think of talk like that?",
+    "you really should watch your language.",
+    "you break my heart everytime you use language like that.",
+    "now listen here, sport.",
+    "mind your ps and qs there, champ."
 ];
 
 function findSwearWords(msg) {
