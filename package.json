@@ -1,5 +1,5 @@
 {
-  "name": "twitch-monitor-bot",
+  "name": "dad-bot",
   "version": "0.1.0",
   "description": "This is a bot for linking twitch streams",
   "main": "bot.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jessdev/twitch-monitor-bot.git"
+    "url": "git+https://github.com/jessdev/dad-bot.git"
   },
   "keywords": [
     "discord",
@@ -17,9 +17,9 @@
   "author": "jessdev@umich.edu",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jessdev/twitch-monitor-bot/issues"
+    "url": "https://github.com/jessdev/dad-bot/issues"
   },
-  "homepage": "https://github.com/jessdev/twitch-monitor-bot#readme",
+  "homepage": "https://github.com/jessdev/dad-bot#readme",
   "dependencies": {
     "axios": "^0.18.1",
     "discord.js": "^12.0.2"
