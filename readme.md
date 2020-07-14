@@ -2,6 +2,8 @@
 A bot to dad your server.
 
 ## Notes on Dependencies
+* latest version of node - [node.js](https://nodejs.org/en/)
+
 Current version of discord.io uses a depicated [package](https://github.com/renesansz/discord-greeter-bot/issues/44)
 
 ### Discord.js
