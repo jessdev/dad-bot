@@ -15,7 +15,7 @@ function findSwearWords(msg) {
     var content = msg.content.toLowerCase();
     if (content.includes("fuck")) {
         msg.reply("Woa there champ. There's no need for F-bombs");
-    } else if (content.includes("shit") || content.includes("ass")) {
+    } else if (content.includes("shit")) {
         msg.reply("Hey now, that's not a good word to use there champ.");
     } else if (content.includes("cunt")) {
         if (msg.author.username == "Kai") {
