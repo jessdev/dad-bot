@@ -19,7 +19,7 @@ Example:
 ```
 wordone,wordtwo,wordthree
 ```
-Create an authentiation file using the following json:
+Create an authentiation file called auth.json using the following json:
 ```json
 {
     "discord":{
