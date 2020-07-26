@@ -29,3 +29,6 @@ Create an authentiation file called auth.json using the following json:
 ```
 1. `npm install`
 2. `npm run run`
+
+## Docker
+`docker run -p 49160:8080 -d jessdev/dad-bot`
