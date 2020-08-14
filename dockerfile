@@ -12,4 +12,4 @@ RUN npm install
 
 COPY --chown=node:node . .
 
-CMD ["node", "src/bot.js"]
+CMD ["node", "dist/bot.js"]
