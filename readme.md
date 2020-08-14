@@ -19,16 +19,24 @@ Example:
 ```
 wordone,wordtwo,wordthree
 ```
-Create an authentiation file called auth.json using the following json:
+Create an configuration file called .env using the following fields/values:
 ```json
-{
-    "discord":{
-        "token": "your token here"
-    }
-}
+DISCORD_TOKEN=<token>
+SWEARWORDS=badwords.txt
 ```
 1. `npm install`
-2. `npm run run`
+2. `npm run start`
 
-## Docker
-`docker run -p 49160:8080 -d jessdev/dad-bot`
+### Running Locally for testing
+The application loads environment variables to load secrets and settings.
+create powershell env variables:
+```powershell
+C> $env:DISCORD_TOKEN = "token"
+C> $env:SWEARWORDS = "path/to/file.txt"
+```
+
+## Running Docker Container
+```
+docker run --env-file .\.env <your-tag>
+```
+ 
