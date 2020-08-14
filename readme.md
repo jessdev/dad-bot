@@ -31,8 +31,8 @@ SWEARWORDS=badwords.txt
 The application loads environment variables to load secrets and settings.
 create powershell env variables:
 ```powershell
-C> $env:DISCORD_TOKEN = "token"
-C> $env:SWEARWORDS = "path/to/file.txt"
+C:\> $env:DISCORD_TOKEN = "token"
+C:\> $env:SWEARWORDS = "path/to/file.txt"
 ```
 
 ## Running Docker Container
