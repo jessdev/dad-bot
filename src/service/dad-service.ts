@@ -9,8 +9,29 @@ export class DadService {
             if(msg.content.toLowerCase().includes("how's mom")){
               msg.reply("Ah your mother's beautiful as always!");
             }
-            if(msg.content.toLocaleLowerCase().includes("where is mom")){
-              msg.channel.send("...aye... you caught me sport. This has been hard for me. I've been putting a good face on but ultimately it's been difficult.")
+            // if(msg.content.toLocaleLowerCase().includes("where is mom")){
+            //   msg.channel.send("...aye... you caught me sport. This has been hard for me. I've been putting a good face on but ultimately it's been difficult.")
+            // }
+            if(msg.content.toLowerCase().includes("tampon")) {
+              msg.reply("Hold on dear! I'm off to the store! **leaves**");
+            }
+            if(this.checkMesssage(msg, "the lawn")) {
+              msg.reply("I CAN'T HEAR YOU OVER THE MOWER? YOU WHAT?");
+            }
+            if(this.checkMesssage(msg, "grill")) {
+              msg.reply("Burgers are almost done! **flips a burger and chuckles**");
+            }
+            if(this.checkMesssage(msg, "home depot")) {
+              msg.reply("**Home depot theme starts playing**");
+            }
+            if(this.checkMesssage(msg, "play catch")){
+              msg.reply("Go long spot!");
+            }
+            if(this.matchMesssage(msg, "I caught it")){
+              msg.reply("Good job, sport!");
+            }
+            if(this.matchMesssage(msg, "I missed")){
+              msg.reply("You'll get it next time, sport!");
             }
           });
 
@@ -38,5 +59,13 @@ export class DadService {
             msg.channel.send("Hi " + whoAmi + "! I'm Dad!");
           }
         }
+    }
+
+    public checkMesssage(msg: Message, inside: string) {
+      return msg.content.toLowerCase().includes(inside);
+    }
+
+    public matchMesssage(msg: Message, match: string) {
+      return msg.content.toLowerCase() === match;
     }
 }
